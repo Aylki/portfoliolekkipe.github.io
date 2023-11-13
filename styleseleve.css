@@ -1,0 +1,155 @@
+/* Réinitialisation des styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styles globaux */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #404040;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #404040;
+    color: #fff;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+p {
+    font-size: 18px;
+}
+
+nav {
+    margin-top: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+main {
+    max-width: 960px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+article {
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    background-color: #404040;
+    color: #fff;
+    padding: 10px;
+}
+
+#projets {
+    margin-top: 150px; /* Ajustez cette valeur selon votre préférence */
+}
+
+/* Barre de navigation fixe */
+.navbar {
+    position: fixed;
+    top: 100;
+    left: 0;
+    width: 100%;
+    background-color: #404040;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    z-index: 100; /* Assurez-vous qu'elle est au-dessus du reste du contenu */
+}
+/* Style de base pour la barre de navigation */
+.navbar {
+    background-color: #333;
+    color: #fff;
+}
+
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar li {
+    display: inline;
+    padding: 15px;
+}
+
+/* Style pour le menu déroulant */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    left: 0;
+}
+
+.dropdown-content li {
+    display: block;
+    padding: 10px;
+}
+
+/* Lorsque l'élément dropdown est survolé */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Lorsque l'élément dropdown a le focus (utile pour l'accessibilité) */
+.dropdown:focus-within .dropdown-content {
+    display: block;
+}
+/* Ajoutez de la marge au contenu pour éviter de le cacher sous la barre de navigation */
+main {
+    margin-top: 100px; /* Ajustez cette valeur en fonction de la hauteur de votre barre de navigation */
+}
+
+/* Media Queries pour la mise en page réactive (à adapter) */
+@media (max-width: 768px) {
+    main {
+        padding: 10px;
+    }
+}
