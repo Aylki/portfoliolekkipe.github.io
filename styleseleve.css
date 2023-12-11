@@ -84,6 +84,17 @@ footer {
     margin-top: 150px; /* Ajustez cette valeur selon votre préférence */
 }
 
+.glowingbox{
+-webkit-box-shadow:0px 0px 30px 0px rgba(101,110,107,0.9);
+-moz-box-shadow: 0px 0px 30px 0px rgba(101,110,107,0.9);
+box-shadow: 0px 0px 30px 0px rgba(101,110,107,0.9);
+}
+
+.slide-in-top {
+	-webkit-animation: slide-in-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-in-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
 /* Barre de navigation fixe */
 .navbar {
     position: fixed;
@@ -114,6 +125,9 @@ footer {
 }
 
 /* Style pour le menu déroulant */
+/* Autres styles inchangés */
+
+/* Style pour le menu déroulant */
 .dropdown {
     position: relative;
 }
@@ -126,6 +140,8 @@ footer {
     padding: 0;
     margin: 0;
     left: 0;
+    opacity: 0; /* Initialisez l'opacité à 0 pour le masquer initialement */
+    transition: opacity 0.5s ease-in-out; /* Ajoutez une transition pour l'opacité */
 }
 
 .dropdown-content li {
@@ -136,12 +152,31 @@ footer {
 /* Lorsque l'élément dropdown est survolé */
 .dropdown:hover .dropdown-content {
     display: block;
+    opacity: 1; /* Changez l'opacité à 1 pour afficher le menu avec une transition */
+    animation: slide-in-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both; /* Ajoutez l'animation slide-in-top */
 }
 
-/* Lorsque l'élément dropdown a le focus (utile pour l'accessibilité) */
-.dropdown:focus-within .dropdown-content {
-    display: block;
+/* Lorsque le survol de l'élément dropdown se termine */
+.dropdown .dropdown-content {
+    display: none; /* Caché par défaut */
+    opacity: 0; /* Opacité initiale à 0 */
+    transition: opacity 0.5s ease-out; /* Ajouter une transition pour l'opacité */
 }
+
+/* Ajoutez une cléframe pour l'animation slide-in-top */
+@keyframes slide-in-top {
+    from {
+        transform: translateY(-15px); /* Animer la translation vers le haut */
+        opacity: 0; /* Animer l'opacité de 0 à 1 */
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+
 /* Ajoutez de la marge au contenu pour éviter de le cacher sous la barre de navigation */
 main {
     margin-top: 100px; /* Ajustez cette valeur en fonction de la hauteur de votre barre de navigation */
