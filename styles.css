@@ -5,6 +5,35 @@
     box-sizing: border-box;
 }
 
+/* Dark Theme Variables */
+:root {
+    --background-color: #121212;
+    --text-color: #ffffff;
+    --header-bg-color: #333333;
+    --main-bg-color: #1e1e1e;
+    --article-bg-color: #252525;
+    --article-border-color: #333333;
+}
+
+/* Applying Dark Theme */
+body.dark-theme {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+header.dark-theme {
+    background-color: var(--header-bg-color);
+}
+
+main.dark-theme {
+    background-color: var(--main-bg-color);
+}
+
+article.dark-theme {
+    background-color: var(--article-bg-color);
+    border-color: var(--article-border-color);
+}
+
 /* Styles globaux */
 body {
     font-family: Arial, sans-serif;
