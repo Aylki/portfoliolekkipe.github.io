@@ -206,11 +206,6 @@ box-shadow: 0px 0px 30px 0px rgba(101,110,107,0.9);
 
 
 
-/* Ajoutez de la marge au contenu pour éviter de le cacher sous la barre de navigation */
-main {
-    margin-top: 100px; /* Ajustez cette valeur en fonction de la hauteur de votre barre de navigation */
-}
-
 /* Media Queries pour la mise en page réactive (à adapter) */
 @media (max-width: 768px) {
     main {
