@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Mon Portfolio</title>
+</head>
+<body>
+    <header>
+        <a href="index.html"><img src="LEKKIPE titre.png" alt="LEKKIPE"  width=20% height=10% > </a>
+        <button id="theme-toggle">Changer de thème</button>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#projets">Projets</a></li>
+                <li class="dropdown">
+                    <a href="#portfolio">Portfolio</a>
+                    <ul class="dropdown-content">
+                        <li><a href="Eleve1.html"><center>Boris <br> BRAS</center></a></li>
+                        <li><a href="Eleve2.html"><center>François Clément <br> Cuzzocréa</center></a></li>
+                        <li><a href="Eleve3.html"><center>Paul <br> DAVID</a></center></li>
+                        <li><a href="Eleve4.html"><center>Jeremy <br> INGALLINA</center></a></li>
+                        <li><a href="Eleve5.html"><center>Valentin <br> MARQUES</center></a></li>
+                    </ul>
+                </li>
+                <li><a href="index.html#a-propos">À Propos</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="projets">
+            <article>
+                <br>
+            <h2>Notre Projet</h2>
+                <h3>Contexte</h3>
+                <p>Le centre de formation Nextech Pertuis nous a embauché en tant que prestataire Informatique.
+                    <br><br>Ce centre est une antenne du centre principal qui se trouve à Avignon.
+                    <br><br>Le Directeur Logistique, qui est notre responsable, est situé sur le campus d’Avignon (siège).
+                    <br><br>L’antenne de Pertuis comporte 5 salles informatiques de 20 postes chacune et une salle serveur qui héberge 5 serveurs, 2 switchs manageables, 1 routeur pare-feu, 1 cyber range. Le centre est équipé de 3 bornes wifi. La partie administrative située sur un sous réseau dédié accueille 10 postes portables et fixes pour les salariés.
+                    </p>
+                <img src="projet1.png" alt="Projet 1">
+                <p>Compétences utilisées : HTML, CSS, JavaScript</p>
+                <a href="lien-vers-projet1">Voir le projet</a>
+            </article>
+            <article>
+                <h3>Projet 2</h3>
+                <p>Description du projet 2.</p>
+                <img src="projet2.jpg" alt="Projet 2">
+                <p>Compétences utilisées : HTML, CSS, PHP</p>
+                <a href="lien-vers-projet2">Voir le projet</a>
+            </article>
+        </section>
+        <section id="a-propos">
+            <h2>À Propos de Nous</h2>
+            <p>Nous sommes des apprenants en BTS SIO-SISR, et nous devons réaliser le projet fils rouge comme projet de BTS, […]</p>
+        </section>
+        <section id="contact">
+            <h2>Contact</h2>
+            <h3>Boris :</h3>
+            <p>[...] | [...]</p><br>
+            <h3>François-Clément :</h3>
+            <p>06 08 88 85 74 | fc.cuzzocrea@gmail.com</p><br>
+            <h3>Paul :</h3>
+            <p>06 28 72 10 04 | pdavid@buro84.com</p><br>
+            <h3>Jeremy :</h3>
+            <p> 07 82 47 08 32 | jeremy.ingallina83@gmail.com</p><br>
+            <h3>Valentin :</h3>
+            <p>06 40 08 25 34 | valentin84110@gmail.com</p><br>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Mon Portfolio</p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+    const themeToggleButton = document.getElementById('theme-toggle');
+    const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+
+    if (currentTheme) {
+        document.body.className = currentTheme;
+    }
+
+    themeToggleButton.addEventListener('click', () => {
+        document.body.classList.toggle('dark-theme');
+        let theme = 'light';
+        if (document.body.classList.contains('dark-theme')) {
+            theme = 'dark-theme';
+        }
+        localStorage.setItem('theme', theme);
+            });
+        });
+    </script>
+<script src="theme-toggle.js"></script>
+</body>
+</html>

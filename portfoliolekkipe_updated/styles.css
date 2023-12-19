@@ -1,0 +1,214 @@
+/* Réinitialisation des styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Dark Theme Variables */
+:root {
+    --background-color: #121212;
+    --text-color: #1e1e1e;
+    --header-bg-color: #333333;
+    --main-bg-color: #1e1e1e;
+    --article-bg-color: #252525;
+    --article-border-color: #333333;
+}
+
+/* Applying Dark Theme */
+body.dark-theme {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+header.dark-theme {
+    background-color: var(--header-bg-color);
+}
+
+main.dark-theme {
+    background-color: var(--main-bg-color);
+}
+
+article.dark-theme {
+    background-color: var(--article-bg-color);
+    border-color: var(--article-border-color);
+}
+
+/* Styles globaux */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #404040;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #404040;
+    color: #fff;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+p {
+    font-size: 18px;
+}
+
+nav {
+    margin-top: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+main {
+    max-width: 960px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+article {
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    background-color: #404040;
+    color: #fff;
+    padding: 10px;
+}
+
+#projets {
+    margin-top: 150px; /* Ajustez cette valeur selon votre préférence */
+}
+
+.glowingbox{
+-webkit-box-shadow:0px 0px 30px 0px rgba(101,110,107,0.9);
+-moz-box-shadow: 0px 0px 30px 0px rgba(101,110,107,0.9);
+box-shadow: 0px 0px 30px 0px rgba(101,110,107,0.9);
+}
+
+.slide-in-top {
+	-webkit-animation: slide-in-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-in-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+/* Barre de navigation fixe */
+.navbar {
+    position: fixed;
+    top: 100;
+    left: 0;
+    width: 100%;
+    background-color: #404040;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    z-index: 100; /* Assurez-vous qu'elle est au-dessus du reste du contenu */
+}
+/* Style de base pour la barre de navigation */
+.navbar {
+    background-color: #333;
+    color: #fff;
+}
+
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar li {
+    display: inline;
+    padding: 15px;
+}
+
+/* Style pour le menu déroulant */
+/* Autres styles inchangés */
+
+/* Style pour le menu déroulant */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    left: 0;
+    opacity: 0; /* Initialisez l'opacité à 0 pour le masquer initialement */
+    transition: opacity 0.5s ease-in-out; /* Ajoutez une transition pour l'opacité */
+}
+
+.dropdown-content li {
+    display: block;
+    padding: 10px;
+}
+
+/* Lorsque l'élément dropdown est survolé */
+.dropdown:hover .dropdown-content {
+    display: block;
+    opacity: 1; /* Changez l'opacité à 1 pour afficher le menu avec une transition */
+    animation: slide-in-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both; /* Ajoutez l'animation slide-in-top */
+}
+
+/* Lorsque le survol de l'élément dropdown se termine */
+.dropdown .dropdown-content {
+    display: none; /* Caché par défaut */
+    opacity: 0; /* Opacité initiale à 0 */
+    transition: opacity 0.5s ease-out; /* Ajouter une transition pour l'opacité */
+}
+
+/* Ajoutez une cléframe pour l'animation slide-in-top */
+@keyframes slide-in-top {
+    from {
+        transform: translateY(-15px); /* Animer la translation vers le haut */
+        opacity: 0; /* Animer l'opacité de 0 à 1 */
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+
+/* Media Queries pour la mise en page réactive (à adapter) */
+@media (max-width: 768px) {
+    main {
+        padding: 10px;
+    }
+}
