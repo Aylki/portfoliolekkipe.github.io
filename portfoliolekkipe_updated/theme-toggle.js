@@ -1,25 +1,28 @@
 document.addEventListener('DOMContentLoaded', (event) => {
     const themeToggleButton = document.getElementById('theme-toggle');
-    const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+    const currentTheme = localStorage.getItem('theme');
 
-    if (currentTheme) {
-        document.body.classList.add(currentTheme);
-        document.querySelector('header').classList.add(currentTheme);
-        document.querySelector('main').classList.add(currentTheme);
+    // Apply or remove the dark theme class based on the saved preference
+    const applyDarkTheme = (apply) => {
+        const method = apply ? 'add' : 'remove';
+        document.body.classList[method]('dark-theme');
+        document.querySelector('header').classList[method]('dark-theme');
+        document.querySelector('main').classList[method]('dark-theme');
         document.querySelectorAll('article').forEach(article => {
-            article.classList.add(currentTheme);
+            article.classList[method]('dark-theme');
         });
+    };
+
+    // If there's a theme set in localStorage, apply it
+    if (currentTheme) {
+        applyDarkTheme(currentTheme === 'dark-theme');
     }
 
     themeToggleButton.addEventListener('click', () => {
-        document.body.classList.toggle('dark-theme');
-        document.querySelector('header').classList.toggle('dark-theme');
-        document.querySelector('main').classList.toggle('dark-theme');
-        document.querySelectorAll('article').forEach(article => {
-            article.classList.toggle('dark-theme');
-        });
+        const isDarkThemeApplied = document.body.classList.contains('dark-theme');
+        applyDarkTheme(!isDarkThemeApplied);
 
-        let theme = document.body.classList.contains('dark-theme') ? 'dark-theme' : 'light';
+        const theme = isDarkThemeApplied ? 'light' : 'dark-theme';
         localStorage.setItem('theme', theme);
     });
 });
