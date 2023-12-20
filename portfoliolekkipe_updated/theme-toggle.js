@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', (event) => {
-    const themeToggleButton = document.getElementById('theme-toggle');
+    const themeToggleButton = document.getElementById('dark-mode-toggle');
     const logoImage = document.getElementById('logo-image'); // L'élément img avec l'ID 'logo-image'
     const lightThemeLogoSrc = 'LEKKIPE titre.png'; // Le logo pour le thème clair
     const darkThemeLogoSrc = 'LEKKIPE titre dark.png'; // Le logo pour le thème sombre (changez ceci selon votre fichier)
