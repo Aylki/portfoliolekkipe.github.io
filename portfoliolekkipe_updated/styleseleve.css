@@ -188,3 +188,33 @@ main {
         padding: 10px;
     }
 }
+
+/* Dark Theme Variables */
+:root {
+    --background-color: #121212;
+    --text-color: #c0c0c0;
+    --header-bg-color: #333333;
+    --main-bg-color: #1e1e1e;
+    --article-bg-color: #252525;
+    --article-border-color: #333333;
+}
+
+/* Applying Dark Theme */
+body.dark-theme {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+header.dark-theme,
+nav.dark-theme,
+main.dark-theme,
+article.dark-theme,
+footer.dark-theme {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+a.dark-theme,
+button.dark-theme {
+    color: var(--text-color);
+}
