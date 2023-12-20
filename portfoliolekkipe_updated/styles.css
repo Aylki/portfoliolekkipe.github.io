@@ -8,7 +8,7 @@
 /* Dark Theme Variables */
 :root {
     --background-color: #121212;
-    --text-color: #1e1e1e;
+    --text-color: #ffffff; /* Changed from #1e1e1e to #ffffff for white text */
     --header-bg-color: #333333;
     --main-bg-color: #1e1e1e;
     --article-bg-color: #252525;
@@ -18,20 +18,22 @@
 /* Applying Dark Theme */
 body.dark-theme {
     background-color: var(--background-color);
-    color: var(--text-color);
+    color: var(--text-color); /* This will apply white color to text */
 }
 
-header.dark-theme {
-    background-color: var(--header-bg-color);
+header.dark-theme,
+nav.dark-theme,
+main.dark-theme,
+article.dark-theme,
+footer.dark-theme {
+    background-color: var(--background-color);
+    color: var(--text-color); /* This will ensure all text within these elements is white */
 }
 
-main.dark-theme {
-    background-color: var(--main-bg-color);
-}
-
-article.dark-theme {
-    background-color: var(--article-bg-color);
-    border-color: var(--article-border-color);
+/* You may also want to adjust links, buttons, or other elements as needed */
+a.dark-theme,
+button.dark-theme {
+    color: var(--text-color); /* This will apply white color to text in links and buttons */
 }
 
 /* Styles globaux */
