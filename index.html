@@ -8,19 +8,20 @@
 </head>
 <body>
     <header>
-        <a href="index.html"><img src="LEKKIPE titre.png" alt="LEKKIPE"  width=20% height=10% > </a>
-        <button id="theme-toggle">Changer de thème</button>
+        <a href="index.html"><img id="logo-image" src="LEKKIPE titre.png" alt="LEKKIPE" width="20%" height="10%"></a>
+
+         <button id="theme-toggle" style="position: fixed; top: 10px; left: 10px;">Changer de thème</button>
         <nav class="navbar">
             <ul>
                 <li><a href="#projets">Projets</a></li>
                 <li class="dropdown">
                     <a href="#portfolio">Portfolio</a>
                     <ul class="dropdown-content">
-                        <li><a href="Eleve1.html"><center>Boris <br> BRAS</center></a></li>
-                        <li><a href="Eleve2.html"><center>François Clément <br> Cuzzocréa</center></a></li>
-                        <li><a href="Eleve3.html"><center>Paul <br> DAVID</a></center></li>
-                        <li><a href="Eleve4.html"><center>Jeremy <br> INGALLINA</center></a></li>
-                        <li><a href="Eleve5.html"><center>Valentin <br> MARQUES</center></a></li>
+                        <li><a href="Eleve1.html">Boris BRAS</a></li>
+                        <li><a href="Eleve2.html">François-Clément CUZZOCREA</a></li>
+                        <li><a href="Eleve3.html">Paul DAVID</a></li>
+                        <li><a href="Eleve4.html">Jeremy INGALLINA</a></li>
+                        <li><a href="Eleve5.html">Valentin MARQUES</a></li>
                     </ul>
                 </li>
                 <li><a href="index.html#a-propos">À Propos</a></li>
@@ -72,24 +73,6 @@
     <footer>
         <p>&copy; 2023 Mon Portfolio</p>
     </footer>
-    <script>
-        document.addEventListener('DOMContentLoaded', (event) => {
-    const themeToggleButton = document.getElementById('theme-toggle');
-    const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
-
-    if (currentTheme) {
-        document.body.className = currentTheme;
-    }
-
-    themeToggleButton.addEventListener('click', () => {
-        document.body.classList.toggle('dark-theme');
-        let theme = 'light';
-        if (document.body.classList.contains('dark-theme')) {
-            theme = 'dark-theme';
-        }
-        localStorage.setItem('theme', theme);
-            });
-        });
-    </script>
+<script src="theme-toggle.js"></script>
 </body>
 </html>

@@ -5,6 +5,37 @@
     box-sizing: border-box;
 }
 
+/* Dark Theme Variables */
+:root {
+    --background-color: #121212;
+    --text-color: #c0c0c0; /* Changed from #1e1e1e to #ffffff for white text */
+    --header-bg-color: #333333;
+    --main-bg-color: #1e1e1e;
+    --article-bg-color: #252525;
+    --article-border-color: #333333;
+}
+
+/* Applying Dark Theme */
+body.dark-theme {
+    background-color: var(--background-color);
+    color: var(--text-color); /* This will apply white color to text */
+}
+
+header.dark-theme,
+nav.dark-theme,
+main.dark-theme,
+article.dark-theme,
+footer.dark-theme {
+    background-color: var(--background-color);
+    color: var(--text-color); /* This will ensure all text within these elements is white */
+}
+
+/* You may also want to adjust links, buttons, or other elements as needed */
+a.dark-theme,
+button.dark-theme {
+    color: var(--text-color); /* This will apply white color to text in links and buttons */
+}
+
 /* Styles globaux */
 body {
     font-family: Arial, sans-serif;
