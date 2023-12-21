@@ -134,8 +134,6 @@ box-shadow: 0px 0px 30px 0px rgba(101,110,107,0.9);
     top: 100;
     left: 0;
     width: 100%;
-    background-color: #404040;
-    color: #fff;
     text-align: center;
     padding: 10px 0;
     z-index: 100; /* Assurez-vous qu'elle est au-dessus du reste du contenu */
