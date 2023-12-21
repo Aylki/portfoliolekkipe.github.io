@@ -21,7 +21,9 @@ body.dark-theme {
     color: var(--text-color); /* This will apply white color to text */
 }
 
-header.dark-theme,
+header.dark-theme {
+    background-color: var(--header-bg-color);
+}
 nav.dark-theme,
 main.dark-theme,
 article.dark-theme,
