@@ -8,8 +8,8 @@
 /* Dark Theme Variables */
 :root {
     --background-color: #121212;
-    --text-color: #c0c0c0; /* Changed from #1e1e1e to #ffffff for white text */
-    --header-bg-color: #333333;
+    --text-color: #c0c0c0;
+    --header-bg-color: #222;
     --main-bg-color: #1e1e1e;
     --article-bg-color: #252525;
     --article-border-color: #333333;
@@ -21,7 +21,9 @@ body.dark-theme {
     color: var(--text-color); /* This will apply white color to text */
 }
 
-header.dark-theme,
+header.dark-theme {
+    background-color: var(--header-bg-color);
+}
 nav.dark-theme,
 main.dark-theme,
 article.dark-theme,
