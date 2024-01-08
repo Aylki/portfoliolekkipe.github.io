@@ -4,28 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styleseleve.css">
+    <link rel="stylesheet" href="stylesboris.css">
     <title>Page de Boris</title>
 </head>
 <body>
     <header>
-        <a href="index.html"><img id="logo-image" src="LEKKIPE titre.png" alt="LEKKIPE" width="20%" height="10%"></a>
-
-        <button id="theme-toggle" style="position: fixed; top: 10px; left: 10px;">Changer de thème</button>
+        <a href="index.html"><img src="LEKKIPE titre.png" alt="LEKKIPE"  width=20% height=10% > </a>
         <nav class="navbar">
             <ul>
                 <li><a href="#projets">Projets</a></li>
                 <li class="dropdown">
                     <a href="#portfolio">Portfolio</a>
                     <ul class="dropdown-content">
-                        <li><a href="Eleve1.html">Boris BRAS</a></li>
-                        <li><a href="Eleve2.html">François-Clément CUZZOCREA</a></li>
-                        <li><a href="Eleve3.html">Paul DAVID</a></li>
-                        <li><a href="Eleve4.html">Jeremy INGALLINA</a></li>
-                        <li><a href="Eleve5.html">Valentin MARQUES</a></li>
+                        <li><a href="Eleve1.html"><center>Boris <br> BRAS</center></a></li>
+                        <li><a href="Eleve2.html"><center>François Clément <br> Cuzzocréa</center></a></li>
+                        <li><a href="Eleve3.html"><center>Paul <br> DAVID</a></center></li>
+                        <li><a href="Eleve4.html"><center>Jeremy <br> INGALLINA</center></a></li>
+                        <li><a href="Eleve5.html"><center>Valentin <br> MARQUES</center></a></li>
                     </ul>
                 </li>
-                <li><a href="index.html#a-propos">À Propos</a></li>
-                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="#a-propos">À Propos</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -34,13 +33,103 @@
     </nav>
     <main>
         <section id="projets">
-            <h2>Contenu principal</h2>
-            <p>Ceci est le contenu principal de ma page eleve 1.</p>
+            <h2>A propos de moi</h2>
+            <p class="text">Je m'appelle Boris BRAS, j'ai 27 ans. Après quelques expériences professionnelles diverses et variées, j'ai décidé de me reconvertir professionnellement dans un domaine pour lequel j'ai toujours eu une appétence innée, l’informatique.</p>
+            <br></br>
+            <p class="text">Désireux de me former dans ce domaine j’ai décidé de me replonger dans les études au travers d’un BTS SIO option SISR en alternance afin d’être au plus prés du réel et du métier en étant au sein d’une entreprise.</p>
+        </section>
+        <br></br>
+
+        <section id="experienc_pro">
+            <h2>Expérience professionnelle</h2>
+            
+            <br></br>
+            <div class="container">
+                  <p class="text">Je suis actuellement au sein d’une entreprise de logistique,  “SMDC Logistique” qui fait partie d’un grand groupe international dans le milieu de la logistique “KATOEN NATIE”. Cette entreprise se compose de 8 entrepôts de plusieurs milliers de m² et de 500 à 600 employés.</p>
+                  <img src="katoen.jpg" alt="logo" class="image">
+            </div>
+            <br></br>
+
+            <p class="text">Mes missions au sein du groupe IT de SMDC Logistique est d’apporter un support utilisateurs sur le matériel informatique courant, participer à l’évolution de l’infrastructure réseau réel et logique du site afin qu’il réponde au mieux aux besoins client et aux normes du groupe ainsi que de veiller à sa maintenance.</p>
+            <br></br>
+            <div class="container">
+                <img src="maintenance_PC.jpg" alt="logo" class="image2">
+                <img src="maintenance_Serv.jpg" alt="logo" class="image2">
+        </section>
+        <br></br>
+
+        <section>
+            <h1 style="text-align: center;">Curriculum Vitae</h1>
+            <br>
+                       
+            <div style="display: flex; justify-content: space-between; flex-wrap: wrap; margin: 20px 0;">
+                <div style="width: 48%;">
+                    
+                    <section>
+                        <h2>Expériences Professionnelles</h2>
+                        <ul style="margin-left: 20px;">                    
+                            <h3>SMDC Logistique - Katoen natie / Août 2023 à maintenant</h3>
+                            <p>  Technicien informatique</p>
+                            <br>
+                            <h3>Laforêt - Août / Decembre 2022</h3>
+                            <p>  Assistant de gestion locative et de co propriété</p>
+                            <br>
+                            <h3>Gendarmerie National - Mars 2018 / Mars 2020</h3>
+                            <p>  Gendarme Adjoint Volontaire APJA</p>
+                            
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2>Formation | Etablissement Scolaire</h2>
+                        <ul style="margin-left: 20px;">                    
+                            <h3>BTS SIO SISR - 2023 à maintenant</h3>
+                            <p> Nextech, 84000 Avignon</p>
+                            <br>
+                            <h3>BTS CGO - 2014 / 2017</h3>
+                            <p> Lycée Montmajour, 13200 Arles</p>
+                            <br>
+                            <h3>Bac STMG option Gestion Finance - 2014</h3>
+                            <p> Lycée Montmajour, 13200 Arles</p>
+                        </ul>
+                    </section>              
+                </div>
+        
+                <div style="width: 48%;">
+                   
+                    <section>
+                        <h2>Compétences</h2>
+                        <ul style="margin-left: 20px;">
+                            <li>A l'aise avec les systèmes d'exploitation Windows 7 & 10</li>
+                            <li>Assemblage PC</li>
+                            <li>Configuration routeur et pare-feu</li>
+                            <li>Gestion, administration et mise en place de serveur de jeux</li>
+                            <li>Notion de codage : Processing, Python, SQF et VBA Basic</li>
+                        </section>
+
+                <section>
+                    <h2>Atouts</h2>
+                    <ul style="margin-left: 20px;">
+                        <li>Pragmatique</li>
+                        <li>Rigoureux</li>
+                        <li>Sérieux</li>
+                    </ul>
+                </section>
+             
+                <section>
+                    <h2>Loisirs</h2>
+                    <ul style="margin-left: 20px;">
+                        <li>Informatique</li>
+                        <li>Aviation</li>
+                        <li>Sport</li>
+                        <li>Moto</li>
+                        <li>Tir Sportif</li>
+                    </ul>
+                </section>
         </section>
     </main>
     <footer>
         <p>&copy; 2023 Page Eleve 1</p>
     </footer>
-<script src="theme-toggle.js"></script>
 </body>
 </html>
